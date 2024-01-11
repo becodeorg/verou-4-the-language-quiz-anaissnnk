@@ -19,8 +19,4 @@ class Word
         return $this->englishTranslation;
     }
 
-    // public function verify(string $answer): bool
-    // {
-
-    // }
 }
