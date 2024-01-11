@@ -10,7 +10,7 @@
 <body>
 	<form method="POST">
 		<section class="question">
-		<label for="word">Select a word:</label>
+		<label for="word">Choose a Japanese word:</label>
         <select id="word" name="word">
             <?php foreach ($words as $word): ?>
                 <option value="<?= htmlspecialchars($word->getJapaneseTranslation()) ?>">
@@ -20,7 +20,7 @@
         </select>
 		</section>
 		<section class="player-answer">
-		<label for="answer">Your answer</label>
+		<label for="answer">What's the English translation?</label>
 		<input id="answer" type="text" name="answer">
 		<button type="submit">Submit Answer</button>
 		</section>
