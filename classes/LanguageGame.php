@@ -9,7 +9,7 @@ class LanguageGame
         // :: is used for static functions
         // They can be called without an instance of that class being created
         // and are used mostly for more *static* types of data (a fixed set of translations in this case)
-        foreach (Data::words() as $frenchTranslation => $englishTranslation) {
+        foreach (Data::words() as $japaneseTranslation => $englishTranslation) {
             // TODO: create instances of the Word class to be added to the words array
         }
     }

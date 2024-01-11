@@ -10,6 +10,7 @@ error_reporting(E_ALL);
 
 // Load your classes
 require_once 'classes/Data.php';
+require_once 'classes/Player.php';
 require_once 'classes/LanguageGame.php';
 // require_once 'classes/Player.php'; // Only needed for extra's
 require_once 'classes/Word.php';
@@ -21,3 +22,7 @@ $game = new LanguageGame();
 $game->run();
 
 require 'view.php';
+
+$Emi = new Player ("Emi");
+echo "<br>";
+echo "The player name is " . $Emi->addEmoji() . "and her score is " . $Emi->getScore();
