@@ -1,12 +1,3 @@
-<?php
-
-declare(strict_types=1);
-include_once 'classes/LanguageGame.php';
-$game = new LanguageGame();
-$words = $game->getWords();
-?>
-
-
 <!doctype html>
 <html lang="en">
 <head>
