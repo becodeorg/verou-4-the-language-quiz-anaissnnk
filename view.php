@@ -1,3 +1,12 @@
+<?php
+
+declare(strict_types=1);
+include_once 'classes/LanguageGame.php';
+$game = new LanguageGame();
+$words = $game->getWords();
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,5 +18,22 @@
 </head>
 <body>
 	<!-- TODO: add a form for the user to play the game -->
+	<form method="POST">
+		<section class="question">
+		<label for="word">Select a word:</label>
+        <select id="word" name="word">
+            <?php foreach ($words as $word): ?>
+                <option value="<?= htmlspecialchars($word->getJapaneseTranslation()) ?>">
+                    <?= htmlspecialchars($word->getJapaneseTranslation()) ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+		</section>
+		<section class="player-answer">
+		<label for="answer">Your answer</label>
+		<input id="answer" type="text" name="answer">
+		<button type="submit">Submit Answer</button>
+		</section>
+</form>
 </body>
 </html>

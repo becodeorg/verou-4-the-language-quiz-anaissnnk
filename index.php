@@ -21,8 +21,13 @@ require_once 'classes/Word.php';
 $game = new LanguageGame();
 $game->run();
 
-require 'view.php';
 
 $Emi = new Player ("Emi");
 echo "<br>";
 echo "The player name is " . $Emi->addEmoji() . "and her score is " . $Emi->getScore();
+
+// foreach ($words as $word) {
+//     echo "Japanese: " . $word->getJapaneseTranslation() . ", English: " . $word->getEnglishTranslation() . "<br>";
+// }
+
+require 'view.php';
