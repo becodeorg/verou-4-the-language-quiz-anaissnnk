@@ -7,14 +7,12 @@ class Data
     public static function words(): array
     {
         return [
-            'pain' => 'bread',
-            'nain de jardin' => 'garden gnome',
-            'ouef' => 'egg',
-            'bouisson' => 'bush',
-            'chapeau' => 'hat',
-            'porte' => 'door',
-            'musique' => 'music',
-            'biscuit' => 'cookie',
+            'パン' => 'bread',
+            '卵' => 'egg',
+            '帽子' => 'hat',
+            'ドアー' => 'door',
+            '音楽' => 'music',
+            'クッキー' => 'cookie',
         ];
     }
 }
