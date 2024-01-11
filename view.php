@@ -8,7 +8,6 @@
 	<title>Game</title>
 </head>
 <body>
-	<!-- TODO: add a form for the user to play the game -->
 	<form method="POST">
 		<section class="question">
 		<label for="word">Select a word:</label>
