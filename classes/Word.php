@@ -4,10 +4,21 @@ require_once 'Data.php';
 
 class Word
 {
-    // TODO: add word (JP) and answer (EN) - (via constructor or not? why?)
-    public function getWords() {
-        $wordData = Data::words();
-        return $wordData;
+    protected $japaneseTranslation;
+    protected $englishTranslation;
+
+    public function __construct(string $japaneseTranslation, string $englishTranslation)
+    {
+        $this->japaneseTranslation = $japaneseTranslation;
+        $this->englishTranslation = $englishTranslation;
+    }
+
+    public function getJapaneseTranslation() {
+        return $this->japaneseTranslation;
+    }
+
+    public function getEnglishTranslation() {
+        return $this->englishTranslation;
     }
 
     public function verify(string $answer): bool
@@ -20,12 +31,3 @@ class Word
         // Bonus (hard): can you allow answers with small typo's (max one character different)?
     }
 }
-
-// return [
-//     'パン' => 'bread',
-//     '卵' => 'egg',
-//     '帽子' => 'hat',
-//     'ドアー' => 'door',
-//     '音楽' => 'music',
-//     'クッキー' => 'cookie',
-// ];
