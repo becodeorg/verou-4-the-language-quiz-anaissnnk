@@ -2,8 +2,6 @@
 
 class Data
 {
-    // This will provide the data you need
-    // No need to change any logic here - only data (to add or update words)
     public static function words(): array
     {
         return [
@@ -13,6 +11,9 @@ class Data
             'ドアー' => 'door',
             '音楽' => 'music',
             'クッキー' => 'cookie',
+            '猫' => 'cat',
+            '犬ー' => 'dog',
+            '服' => 'clothes',
         ];
     }
 }
