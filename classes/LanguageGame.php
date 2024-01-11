@@ -13,7 +13,6 @@ class LanguageGame
         $this->words = [];
 
         foreach (Data::words() as $japaneseTranslation => $englishTranslation) {
-            // TODO: create instances of the Word class to be added to the words array
             $word = new Word($japaneseTranslation, $englishTranslation);
             $this->words[] = $word;
         }
@@ -25,8 +24,7 @@ class LanguageGame
 
     public function run(): void
     {
-        // Option B: user has just submitted an answer
-        // TODO: verify the answer (use the verify function in the word class) - you'll need to get the used word from the array first
+
         if($_SERVER["REQUEST_METHOD"] === "POST") {
             $answer = htmlspecialchars($_POST["answer"]);
             $selectedWord = htmlspecialchars($_POST["word"]);
@@ -41,14 +39,13 @@ class LanguageGame
             }
 
             if ($correctEnglishTranslation !== null) {
-                // Compare the player's answer with the correct English translation
                 if ($answer === $correctEnglishTranslation) {
                     echo "You got it right!";
                 } else {
                     echo "Wrong answer!";
                 }
             } else {
-                echo "Invalid selection"; // Handle the case when the selected word is not found
+                echo "Invalid selection";
             }
         }
 
