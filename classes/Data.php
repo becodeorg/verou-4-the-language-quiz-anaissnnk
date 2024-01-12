@@ -14,6 +14,10 @@ class Data
             '猫' => 'cat',
             '犬ー' => 'dog',
             '服' => 'clothes',
+            '夏' => 'summer',
+            '秋' => 'fall',
+            '冬' => 'winter',
+            '春' => 'spring',
         ];
     }
 }
